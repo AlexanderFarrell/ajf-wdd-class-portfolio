@@ -1,9 +1,13 @@
 {
-  "name": "ajf-wdd-class-portfolio",
-  "version": "0.0.0",
+  "name": "my-webpack-project",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -11,6 +15,16 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
-  }
+    "morgan": "~1.9.1",
+    "sanitize-html": "^2.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@webpack-cli/generators": "^2.1.0",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0"
+  },
+  "description": "My webpack project"
 }
