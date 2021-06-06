@@ -1,0 +1,43 @@
+<h1>Questions</h1>
+<p>Why use an Immediately Invoked Function Expression? Are there use cases for why this is particularly useful? Like with a really big file?</p>
+<p>If a closure captures a variable, that closure is technically not pure?</p>
+<p>If a function has no arguments, but always returns exactly the same result with no side-effects or reliance on anything else (like a set up function), could it be considered pure?</p>
+
+<h1>Notes</h1>
+<p>An immediately invoked function expression is invoked right away. Can be used to create temporary scopes.</p>
+<p>Add 'use strict'; to make the javascript file be as such. One can add it to an IIFE as well.</p>
+<p>Functions can redefine themselves. Just set the function equal to something else.</p>
+<p>When redefining a function, captured (if the last owner) or declared properties will be lost.</p>
+<p>One can set the functions to values which are compatible. "Init-Time Branching"</p>
+<p><b>Set functions to be contextual for less typing.</b></p>
+<p>JavaScript supports recursive functions.</p>
+<p>Async and callbacks are how JavaScript implements events.</p>
+<p>Errors are first.</p>
+<p>In a promise, the reject could be used to clean up what happens if it can't or should not be delivered. Use reject in security.</p>
+<p>Chains of promises require chains of .then() </p>
+<p>Write abstract functions that call a ton of things and use a  callback/resolve/return</p>
+<p>Have functions return functions!!! An example the reading uses is for different languages.</p>
+<p>Generator functions</p>
+<p><b>Coroutines in JavaScript: </b>function* something() {}. Then just do a yield return, and invoke that.</p>
+<h2>Functional Programming</h2>
+<h3>Pure Function Rules:</h3>
+<ol>
+	<li>Absolutely no reliance on values outside the function. So closures which capture are not pure?</li>
+	<li>Absolutely no side-effects. It doesn't rely or change anything other than the parameters or what is created inside.</li>
+	<li>Same Parameters -> Same Result</li>
+</ol>
+<h3>Higher-Order Functions</h3>
+<p>Function is parameter, return value or both. A receptionist would be a higher-order function job.</p>
+<h3>Currying</h3>
+<p>Allows for more specific functions to be defined off of generic ones, gradually resolving without requiring all parameters to be passed. Generally only one at a time.</p>
+<h3>Fetch</h3>
+<p>Fetch - then response - then use data - catch error</p>
+<h3>Responses</h3>
+<ul>
+	<li>response.redirect()</li>
+	<li>response.text()</li>
+	<li>response.file()</li>
+	<li>response.json()</li>
+</ul>
+<h3>Headers let additional info be passed</h3>
+<p>FormData simplifies sending</p>
